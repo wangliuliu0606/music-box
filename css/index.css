@@ -1,0 +1,270 @@
+html,body,section {
+  height: 100%;
+  overflow: hidden;
+}
+
+.layout {
+  margin: 0 auto;
+  width: 600px;
+}
+
+@media(min-width:700px){
+  .layout {
+    width: 600px;
+  }
+}
+
+@media(min-width:900px){
+  .layout {
+    width: 800px;
+  }
+}
+
+@media(min-width:1000px){
+  .layout {
+    width: 900px;
+  }
+}
+
+@media(min-width:1200px){
+  .layout {
+    width: 1100px;
+  }
+}
+
+main {
+  padding-top: 12vh;
+  height: calc(100% - 24vh)
+}
+
+main::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+main .picture {
+  float: left;
+}
+
+main .picture figure {
+  width: 45vh;
+  height: 45vh;
+  background-image: url(http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-middle);
+  background-size: cover;
+  background-position: center center;
+}
+
+main .picture .icons {
+  display: flex;
+  margin-top: 5vh;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .picture .icons .iconfont {
+  font-size: 6vh;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all .3s;
+  cursor: pointer;
+}
+
+main .picture .icons .iconfont:nth-child(1){
+  font-size: 5vh;
+}
+
+main .picture .icons .iconfont:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+main .picture .icons .iconfont.active{
+  color: #ff5722;
+}
+
+main .detail {
+  margin-left: 54vh;
+  color: #fff;
+}
+
+main .detail .typ {
+  display: inline-block;
+  padding: 0.6vh 1.5vh;
+  font-size: 2vh;
+  background: rgb(46, 110, 236);
+}
+
+main .detail h2 {
+  font-size: 6vh;
+  margin-top: 3vh;
+}
+
+main .detail .icons {
+  display: flex;
+  margin-top: 12vh;
+}
+
+main .detail .icons li {
+  flex: 1;
+}
+
+main .detail .icons .iconfont {
+  font-size: 3vh;
+  margin-right: 1.5vh;
+}
+
+main .detail .time-bar {
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+}
+
+main .detail .time-bar .bar {
+  position: relative;
+  flex: 1;
+  height: 0.8vh;
+  margin-right: 2vh;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+main .detail .time-bar .bar .bar-son {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.8vh;
+  width: 0;
+  background: rgba(255, 255, 255, 1);
+  transition: all 0.8s;
+}
+
+main .detail .time-bar .now-time {
+  font-size: 2vh;
+}
+
+main .detail .author {
+  font-size: 2vh;
+  margin-top: 2vh;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+main .detail .lyrics {
+  font-size: 3vh;
+  margin-top: 3vh;
+  color: rgba(255, 255, 255, 1);
+}
+
+main .detail .lyrics .boomText {
+  display: inline-block;
+  opacity: 0;
+}
+
+footer {
+  height: 24vh;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px -.25vh .25vh .25vh rgba(255,255,255,0.2);
+}
+
+footer > .layout {
+  position: relative;
+}
+
+footer:hover .iconfont {
+  opacity: 1;
+}
+
+footer .left,
+footer .right {
+  position: absolute;
+  top: 6vh;
+}
+
+footer .left {
+  left: -11vh;
+}
+
+footer .right {
+  right: -11vh;
+}
+
+footer .iconfont {
+  font-size: 10vh;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all .4s;
+  opacity: 0;
+}
+
+footer .iconfont:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer .box {
+  position: relative;
+  height: 24vh;
+  overflow: hidden;
+}
+
+footer .box ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer .box ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+footer li {
+  float: left;
+  width: 20vh;
+  height: 20vh;
+  margin-right: 3.2vh;
+  margin-top: 2vh;
+  margin-left: 1vh;
+  cursor: pointer;
+}
+
+footer li:hover {
+  box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+}
+
+.actives {
+  box-shadow: 0 0 .5vh .5vh rgba(255,255,255,0.8);
+}
+
+footer li .cover {
+  height: 16vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+footer li h3 {
+  margin-top: 1vh;
+  font-size: 2vh;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background: url('http://cloud.hunger-valley.com/music/public_tuijian_spring.jpg-big') center center no-repeat;
+  background-size: cover;
+  filter: blur(4px);
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
